@@ -1,7 +1,3 @@
-# Vercel-XHTTP
-رله‌ی XHTTP روی Vercel Edge برای پنهان کردن سرور Xray/V2Ray پشت دامنه‌ی *.vercel.app — شامل راهنمای کامل فارسی از صفر تا صد
-
-
 # راهنمای کامل فارسی — Vercel XHTTP Relay
 
 این یک رِله (relay) ساده روی **Vercel Edge Function** هست که ترافیک **XHTTP** کلاینت Xray/V2Ray رو به سرور Xray پشتی شما فوروارد می‌کنه. هدف: استفاده از شبکه‌ی جهانی Vercel و دامنه‌ی `*.vercel.app` به‌عنوان پوشش (front) برای IP سرور اصلی.
