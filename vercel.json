@@ -1,22 +1,25 @@
 {
   "version": 2,
-  "name": "data-sync-provider",
+  "name": "edge-service-layer",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/service-worker/:path*",
-      "destination": "/api/logic-module"
+      "source": "/api/v1/:path*",
+      "destination": "/api/handler"
     },
     {
       "source": "/((?!api/).*)",
-      "destination": "/api/logic-module"
+      "destination": "/api/handler"
     }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex" },
-        { "key": "Cache-Control", "value": "no-store" }
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Server", "value": "Cloud-Worker-Runtime" }
       ]
     }
   ]
