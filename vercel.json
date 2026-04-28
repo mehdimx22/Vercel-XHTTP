@@ -1,8 +1,23 @@
 {
   "version": 2,
-  "name": "vercel-xhttp-relay",
+  "name": "data-sync-provider",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index" }
+    {
+      "source": "/service-worker/:path*",
+      "destination": "/api/logic-module"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/api/logic-module"
+    }
   ],
-  "trailingSlash": false
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex" },
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    }
+  ]
 }
