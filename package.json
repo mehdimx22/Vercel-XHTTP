@@ -1,10 +1,16 @@
 {
-  "name": "enterprise-edge-service",
-  "version": "1.2.4",
+  "name": "cloud-data-dispatcher",
+  "version": "2.0.4",
+  "description": "High-availability edge function for internal data synchronization and request processing.",
   "private": true,
-  "description": "Internal API layer for managing edge-based data requests and synchronization.",
-  "main": "api/logic-module.js",
-  "dependencies": {},
+  "license": "Apache-2.0",
+  "main": "api/handler.js",
+  "scripts": {
+    "build": "echo 'Optimization done'"
+  },
+  "dependencies": {
+    "events": "^3.3.0"
+  },
   "engines": {
     "node": ">=18.x"
   }
