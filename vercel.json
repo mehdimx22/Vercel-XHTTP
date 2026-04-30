@@ -1,26 +1,5 @@
 {
-  "version": 2,
-  "name": "edge-service-layer",
-  "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
-    {
-      "source": "/api/v1/:path*",
-      "destination": "/api/handler"
-    },
-    {
-      "source": "/((?!api/).*)",
-      "destination": "/api/handler"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Server", "value": "Cloud-Worker-Runtime" }
-      ]
-    }
+    { "source": "/(.*)", "destination": "/api/handler.js" }
   ]
 }
