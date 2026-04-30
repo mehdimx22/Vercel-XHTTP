@@ -1,13 +1,7 @@
 {
   "name": "cloud-data-dispatcher",
   "version": "2.0.4",
-  "description": "High-availability edge function for internal data synchronization and request processing.",
   "private": true,
-  "license": "Apache-2.0",
-  "main": "api/handler.js",
-  "scripts": {
-    "build": "echo 'Optimization done'"
-  },
   "dependencies": {
     "events": "^3.3.0"
   },
